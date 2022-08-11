@@ -6,6 +6,8 @@ import contactLinkData from "./contact_link.js"
 import contactLinkElementData from "./contact_link_element.js"
 import darkManImageData from "./dark_man_image.js"
 import SnowCanvas from "./snow_canvas.js"
+import menuContainerData from "./menu_container.js"
+import menuElementData from "./menu_element.js"
 
 
 const snowCanvas = new SnowCanvas()
@@ -17,6 +19,8 @@ app.component('home-page-container', homePageContainerData)
 app.component('contact-link', contactLinkData)
 app.component('contact-link-element', contactLinkElementData)
 app.component('dark-man-image', darkManImageData)
+app.component('menu-container', menuContainerData)
+app.component('menu-route-element', menuElementData)
 
 
 app.mount("#app")

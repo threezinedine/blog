@@ -1,7 +1,15 @@
 export default {
     data() {
         return {
-            show: true
+            isMenuOn: false,
         }
+    },
+    methods: {
+        turnMenuOn: function() {
+            this.isMenuOn = true
+        },
+        turnMenuOff: function() {
+            this.isMenuOn = false
+        },
     }
 }
