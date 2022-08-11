@@ -1,0 +1,15 @@
+.contact-link {
+    position: fixed;
+    top: 250px;
+    left: 40px;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    z-index: 2;
+}
+
+.contact-link__link {
+    display: inline-block;
+    color: var(--dark-white-color);
+    padding: 10px;
+}

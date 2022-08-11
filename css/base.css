@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+:root {
+    /*--background-color: #171717;*/
+    --background-color: #000;
+    --main-color: #04a777;
+    --muted-color: #aaa;
+    --white-color: #fff;
+    --dark-white-color: #ccc;
+    --black-color: #000;
+    --text-color: #333;
+    --logo-size: 60px;
+    --logo-font: 2.5rem;
+    --logo-rotate-angle: -40deg;
+    --logo-animation-time: .5s;
+}
+
+
+html {
+    display: flex;
+    font-size: 62.5%;
+    font-family: 'Roboto';
+}
+
+
+body {
+    width: 100%;
+}
+
+
+.text-muted {
+    color: var(--muted-color) !important;
+}
+
+
+.text-white {
+    color: var(--white-color) !important;
+}
+
+
+.text-black {
+    color: var(--black-color) !important;
+}
+
+
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+
+
+.text-flip-horizontal {
+    transform: scaleX(-1) !important;
+}
+
+
+.text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.text-main {
+    color: var(--main-color) !important;
+}
+
+
+.pointer-cursor {
+    cursor: pointer !important;
+}
+
+
+.non-underline-link:hover {
+    text-decoration: none;
+}
