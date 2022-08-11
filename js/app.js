@@ -8,6 +8,7 @@ import darkManImageData from "./dark_man_image.js"
 import SnowCanvas from "./snow_canvas.js"
 import menuContainerData from "./menu_container.js"
 import menuElementData from "./menu_element.js"
+import crossModalData from "./cross_modal.js"
 
 
 const snowCanvas = new SnowCanvas()
@@ -21,6 +22,7 @@ app.component('contact-link-element', contactLinkElementData)
 app.component('dark-man-image', darkManImageData)
 app.component('menu-container', menuContainerData)
 app.component('menu-route-element', menuElementData)
+app.component('cross-modal', crossModalData)
 
 
 app.mount("#app")

@@ -18,6 +18,8 @@
     --logo-font: 3.5rem;
     --logo-rotate-angle: -40deg;
     --logo-animation-time: .5s;
+    --background-route-letter-spacing: 4px;
+    --background-route-opacity: .2;
 }
 
 
@@ -30,6 +32,7 @@ html {
 
 body {
     width: 100%;
+    overflow: hidden;
 }
 
 

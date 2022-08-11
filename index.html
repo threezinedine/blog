@@ -5,6 +5,7 @@
         <title>My Blog</title>
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/modal.css" />
         <link rel="stylesheet" href="css/navbar.css" />
         <link rel="stylesheet" href="css/home.css" />
         <link rel="stylesheet" href="css/fade.css" />
@@ -35,9 +36,11 @@
             <transition name="fade">
                 <menu-container 
                     v-if="isMenuOn"
-                    :turn-menu-off="turnMenuOff">
+                    :turn-menu-off="turnMenuOff"
+                    :turn-on-cross-modal="turnOnCrossModal">
                 </menu-container>
             </transition>
+            <cross-modal v-if="isCrossModalRun"></cross-modal>
         </div>
 
         <script src="https://unpkg.com/vue@3"></script>

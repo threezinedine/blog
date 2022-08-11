@@ -68,7 +68,20 @@
     bottom: 0;
     font-size: 15rem;
     z-index: 154;
-    opacity: .2;
+    opacity: var(--background-route-opacity);
+    letter-spacing: var(--background-route-letter-spacing);
     font-weight: 700;
     font-family: 'Monoton';
+    animation: backgroundFadeIn ease .8s;
+}
+
+
+@keyframes backgroundFadeIn {
+    from {
+        letter-spacing: 80px;
+        opacity: 0;
+    } to {
+        letter-spacing: var(--background-route-letter-spacing);
+        opacity: var(--background-route-opacity);
+    }
 }

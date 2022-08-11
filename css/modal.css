@@ -1,0 +1,23 @@
+.cross-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 150%;
+    height: 100%;
+    background-color: var(--main-color);
+    z-index: 1000;
+    transform: skewX(-10deg) translateX(-130%);
+    animation: crossModalCross ease 3s;
+}
+
+
+
+@keyframes crossModalCross {
+    from {
+        transform: skewX(-10deg) translateX(-150%);
+    }
+    to {
+        transform: skewX(-10deg) translateX(75%);
+    }
+}
