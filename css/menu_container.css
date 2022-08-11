@@ -27,31 +27,16 @@
     transform: rotate(0);
     animation: rotateQuitNotHover ease .3s; 
     padding: 30px;
+    transition: all .2s ease;
 }
 
 
 .menu-navbar__quit:hover {
     animation: rotateQuitHover ease .3s;
     transform: rotate(90deg);
+    font-size: 3.5rem;
 }
 
-
-@keyframes rotateQuitHover {
-    from {
-        transform: rotate(0);
-    } to {
-        transform: rotate(90deg);
-    }
-}
-
-
-@keyframes rotateQuitNotHover {
-    from {
-        transform: rotate(90deg);
-    } to {
-        transform: rotate(0deg);
-    }
-}
 
 .menu-route {
     display: flex;
@@ -66,6 +51,12 @@
     font-size: 3rem;
     padding: 10px;
     z-index: 156;
+    transition: all .3s ease;
+}
+
+
+.menu-route__element:hover {
+    font-size: 4rem;
 }
 
 

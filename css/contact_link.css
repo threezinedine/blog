@@ -12,4 +12,11 @@
     display: inline-block;
     color: var(--dark-white-color);
     padding: 10px;
+    transition: font-size .2s ease;
+}
+
+
+.contact-link__link:hover {
+    color: var(--main-color);
+    font-size: 3rem;
 }

@@ -14,9 +14,9 @@ export default {
         <div class="menu-container" >
             <div class="menu-navbar">
                 <navbar-logo></navbar-logo>
-                <div class="menu-navbar__quit pointer-cursor text-center" 
+                <div class="menu-navbar__quit text-white-hover pointer-cursor text-center" 
                     @click="turnMenuOff">
-                    <i class="fa-solid fa-xmark text-white"></i>
+                    <i class="fa-solid fa-xmark"></i>
                 </div>
             </div>
         <div class="menu-route">

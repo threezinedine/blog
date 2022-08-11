@@ -5,7 +5,7 @@ export default {
         }
     },
     template: `
-        <div class="navbar-logo pointer-cursor">
+        <div class="navbar-logo text-white-hover pointer-cursor">
             {{ letter }}
         </div>
     ` 

@@ -15,62 +15,23 @@
     font-family: 'Monoton';
     width: var(--logo-size);
     height: var(--logo-size);
-    color: var(--dark-white-color);
     font-size: var(--logo-font);
     border-radius: 50%;
     border: 2px solid var(--white-color);
     text-align: center;
     align-items: center;
     justify-content: center;
-    animation: rotateRight ease var(--logo-animation-time);
     transform: rotate(0deg);
+    transition: all .2s ease;
 }
 
 
 .navbar-logo:hover {
-    animation: rotateLeft ease .3s;
     transform: rotate(var(--logo-rotate-angle));
-    color: var(--white-color);
-}
-
-
-@keyframes rotateLeft {
-    from {
-        transform: rotate(0deg);
-    } 
-    to {
-        transform: rotate(var(--logo-rotate-angle));
-    }
-}
-
-
-@keyframes rotateRight {
-    from {
-        transform: rotate(var(--logo-rotate-angle));
-    }
-    to {
-        transform: rotate(0deg);
-    }
-}
-
-
-@keyframes fadeIn {
-    from {
-        opacity: .2;
-    }
-    to {
-        opacity: 1.;
-    }
-}
-
-
-@keyframes fadeOut {
-    from {
-        opacity: .8;
-    }
-    to {
-        opacity: 0;
-    }
+    border-color: var(--main-color);
+    font-size: calc(var(--logo-font) + 1rem);
+    width: calc(var(--logo-size) + 10px);
+    height: calc(var(--logo-size) + 10px);
 }
 
 
@@ -84,6 +45,11 @@
 .menu-btn__btn {
     color: var(--dark-white-color);
     font-size: var(--logo-font);
-    transition: all 8s linear;
+    transition: font-size .3s ease;
+}
+
+
+.menu-btn__btn:hover {
+    color: var(--main-color);
 }
 

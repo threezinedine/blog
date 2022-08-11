@@ -78,3 +78,13 @@ body {
 .non-underline-link:hover {
     text-decoration: none;
 }
+
+
+.text-white-hover {
+    color: var(--white-color) !important;
+}
+
+
+.text-white-hover:hover {
+    color: var(--main-color) !important;
+}
