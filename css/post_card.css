@@ -1,0 +1,45 @@
+.post-card {
+    position: relative;
+    display: block;
+    width: 36vw;
+    height: 50vh;
+    color: #fff;
+    margin: 30px 75px;
+    overflow-y: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+
+.post-card__img {
+    position: relative;
+    padding: 25%;
+    background-size: cover;
+    transition: margin-top ease .4s;
+}
+
+
+.post-card__title {
+    display: block;
+    font-size: 2rem;
+    text-align: center;
+    margin: 15px 10px;
+    height: 40px;
+}
+
+
+.post-card__description {
+    display: block;
+    font-size: 1.3rem;
+    height: 180px;
+}
+
+
+.post-card__time {
+    position: absolute;
+    display: inline-block;
+    font-size: 1.2rem;
+    background-color: var(--main-color);
+    padding: 2px 4px;
+    left: 0;
+    bottom: 0;
+}

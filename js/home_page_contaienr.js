@@ -47,6 +47,10 @@ export default {
                 <span v-show="variable != ''" class="description-pointer text-white">|</span>
             </div>
         </div> 
+        <contact-link>
+        </contact-link>
+        <dark-man-image>
+        </dark-man-image>
     `,
     methods: {
         updateVariable() {

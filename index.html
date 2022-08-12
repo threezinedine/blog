@@ -4,8 +4,11 @@
         <meta charset="utf-8">
         <title>My Blog</title>
         <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/page_blog_container.css" />
         <link rel="stylesheet" href="css/main.css" />
         <link rel="stylesheet" href="css/modal.css" />
+        <link rel="stylesheet" href="css/post_card.css" />
+        <link rel="stylesheet" href="css/page_title.css" />
         <link rel="stylesheet" href="css/navbar.css" />
         <link rel="stylesheet" href="css/home.css" />
         <link rel="stylesheet" href="css/fade.css" />
@@ -23,21 +26,21 @@
         <div class="canvas-container">
             <canvas id="canvas"></canvas>
         </div>
-        <div id="app" style="height: 100vh;">
+        <div id="app">
             <navbar-container 
                 :turn-menu-on="turnMenuOn">
             </navbar-container>
-            <home-page-container>
+            <home-page-container v-if="mode.isActive(0)">
             </home-page-container>
-            <contact-link>
-            </contact-link>
-            <dark-man-image>
-            </dark-man-image>
+            <blog-page-container v-else-if="mode.isActive(2)">
+            </blog-page-container>
+            <footer-custom></footer-custom>
             <transition name="fade">
                 <menu-container 
                     v-if="isMenuOn"
                     :turn-menu-off="turnMenuOff"
-                    :turn-on-cross-modal="turnOnCrossModal">
+                    :turn-on-cross-modal="turnOnCrossModal"
+                    :mode="mode">
                 </menu-container>
             </transition>
             <cross-modal v-if="isCrossModalRun"></cross-modal>

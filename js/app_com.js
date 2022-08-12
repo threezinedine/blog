@@ -1,8 +1,12 @@
+import Mode from "./mode.js"
+
+
 export default {
     data() {
         return {
             isMenuOn: false,
             isCrossModalRun: false,
+            mode: Mode(),
         }
     },
     methods: {

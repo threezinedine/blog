@@ -1,20 +1,10 @@
 export default {
     data() {
         return {
-            routes: [
-                {route: "Home", func: () => {
-                    this.turnOnCrossModal()
-                    setTimeout(()=> {
-                        this.turnMenuOff()
-                    }, 1000)
-                }}, 
-                {route: "Blog", func: () => {}},
-                {route: "Contact", func: () => {}}
-            ],
             hoverRoute: ""
         }
     },
-    props: ["turnMenuOff", "turnOnCrossModal"],
+    props: ["turnMenuOff", "turnOnCrossModal", "mode"],
     template: `
         <div class="menu-container" >
             <div class="menu-navbar">
@@ -26,11 +16,13 @@ export default {
             </div>
         <div class="menu-route">
                 <menu-route-element 
-                    v-for="route in routes" 
-                    @mouseover="hoverRoute=route.route" 
+                    v-for="index in mode.getLength()" 
+                    @mouseover="hoverRoute=mode.getModeName(index-1)" 
                     @mouseleave="hoverRoute=''"
-                    v-model="route"
-                    :turn-on-cross-modal="turnOnCrossModal">
+                    :index="index-1"
+                    :mode="mode"
+                    :turn-on-cross-modal="turnOnCrossModal"
+                    :turn-menu-off="turnMenuOff">
                     </menu-route-element>
                 <div class="text-white menu-route__background-route text-center"
                     v-if="hoverRoute!=''">
@@ -38,5 +30,7 @@ export default {
                 </div>
             </div>
         </div>
-    `
+    `,
+    mounted() {
+    }
 }

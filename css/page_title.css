@@ -1,0 +1,15 @@
+.page-title {
+    color: var(--white-color);
+    z-index: 99;
+    margin-top: 40px;
+}
+
+
+.page-title__title {
+    font-size: 5rem;
+}
+
+
+.page-title__subtitle {
+    font-size: 2.4rem;
+}

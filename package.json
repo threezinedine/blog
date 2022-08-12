@@ -10,6 +10,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "live-server": "^1.2.2"
+    "axios": "^0.27.2",
+    "live-server": "^1.2.2",
+    "vue-axios": "^3.4.1"
   }
 }

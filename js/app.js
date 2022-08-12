@@ -9,6 +9,11 @@ import SnowCanvas from "./snow_canvas.js"
 import menuContainerData from "./menu_container.js"
 import menuElementData from "./menu_element.js"
 import crossModalData from "./cross_modal.js"
+import blogPageContainer from "./blog_page_container.js"
+import pageTitleData from "./page_title.js"
+import postsContainerData from "./posts_container.js"
+import postCardData from "./post_card.js"
+import footerCustomData from "./footer_custom.js"
 
 
 const snowCanvas = new SnowCanvas()
@@ -23,6 +28,11 @@ app.component('dark-man-image', darkManImageData)
 app.component('menu-container', menuContainerData)
 app.component('menu-route-element', menuElementData)
 app.component('cross-modal', crossModalData)
+app.component('blog-page-container', blogPageContainer)
+app.component('page-title', pageTitleData)
+app.component('posts-container', postsContainerData)
+app.component('post-card', postCardData)
+app.component('footer-custom', footerCustomData)
 
 
 app.mount("#app")
