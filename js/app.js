@@ -14,6 +14,9 @@ import pageTitleData from "./page_title.js"
 import postsContainerData from "./posts_container.js"
 import postCardData from "./post_card.js"
 import footerCustomData from "./footer_custom.js"
+import postContainerData from "./post_full.js"
+import postParaphaseData from "./post_paraphase.js"
+import postParaphaseElementData from "./post_paraphase_element.js"
 
 
 const snowCanvas = new SnowCanvas()
@@ -33,6 +36,9 @@ app.component('page-title', pageTitleData)
 app.component('posts-container', postsContainerData)
 app.component('post-card', postCardData)
 app.component('footer-custom', footerCustomData)
+app.component('post-container', postContainerData)
+app.component('post-paraphase', postParaphaseData)
+app.component('post-paraphase-element', postParaphaseElementData)
 
 
 app.mount("#app")

@@ -1,7 +1,7 @@
 export default function() {
     const routes = ["Home", "About", "Blog"]
 
-    let mode = 2
+    let mode = 2 
 
     return {
         getModeName(index) {

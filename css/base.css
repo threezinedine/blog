@@ -37,6 +37,11 @@ body {
 }
 
 
+.text-color {
+    color: var(--text-color) !important;
+}
+
+
 .text-muted {
     color: var(--muted-color) !important;
 }

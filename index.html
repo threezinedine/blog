@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="css/main.css" />
         <link rel="stylesheet" href="css/modal.css" />
         <link rel="stylesheet" href="css/post_card.css" />
+        <link rel="stylesheet" href="css/post_container.css" />
         <link rel="stylesheet" href="css/page_title.css" />
         <link rel="stylesheet" href="css/navbar.css" />
         <link rel="stylesheet" href="css/home.css" />
@@ -29,19 +30,26 @@
         <div id="app">
             <navbar-container 
                 :turn-menu-on="turnMenuOn">
-            </navbar-container>
-            <home-page-container v-if="mode.isActive(0)">
-            </home-page-container>
-            <blog-page-container v-else-if="mode.isActive(2)">
-            </blog-page-container>
+                    </navbar-container>
+            <home-page-container 
+                v-if="mode.isActive(0)">
+                    </home-page-container>
+            <blog-page-container 
+                v-else-if="mode.isActive(2)"
+                    :turn-on-cross-modal="turnOnCrossModal"
+                    :showed-post="showedPost"
+                    :return-posts-container="returnPostsContainer"
+                    :read-post="readPost">
+                        </blog-page-container>
             <footer-custom></footer-custom>
             <transition name="fade">
                 <menu-container 
                     v-if="isMenuOn"
-                    :turn-menu-off="turnMenuOff"
-                    :turn-on-cross-modal="turnOnCrossModal"
-                    :mode="mode">
-                </menu-container>
+                        :turn-menu-off="turnMenuOff"
+                        :turn-on-cross-modal="turnOnCrossModal"
+                        :return-posts-container="returnPostsContainer"
+                        :mode="mode">
+                            </menu-container>
             </transition>
             <cross-modal v-if="isCrossModalRun"></cross-modal>
         </div>

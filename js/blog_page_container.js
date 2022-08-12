@@ -7,15 +7,23 @@ export default {
             posts: [],
         }
     },
+    props: ['turnOnCrossModal', 'showedPost', 'readPost', 'returnPostsContainer'],
     template: `
         <div class="blog-page-container">
             <page-title :page-title-data="title"></page-title>
-            <posts-container :posts="posts"></posts-container>
+            <posts-container 
+                v-if="showedPost == -1" 
+                    :posts="posts"
+                        :read-post="readPost">
+                            </posts-container>
+            <post-container v-else 
+                :post-index="showedPost"
+                    :posts="posts"
+                        :return-posts-container="returnPostsContainer">
+                            </post-container>
         </div>
     `,
     methods: {
-        fetchData() {
-        }
     },
     mounted() {
         fetch('../posts.json')

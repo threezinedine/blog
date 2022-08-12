@@ -20,9 +20,9 @@
 
 .post-card__title {
     display: block;
-    font-size: 2rem;
+    font-size: 2.4rem;
     text-align: center;
-    margin: 15px 10px;
+    margin: 25px 10px;
     height: 40px;
 }
 
@@ -37,7 +37,7 @@
 .post-card__time {
     position: absolute;
     display: inline-block;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     background-color: var(--main-color);
     padding: 2px 4px;
     left: 0;

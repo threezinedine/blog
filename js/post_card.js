@@ -4,10 +4,11 @@ import Post from "./post.js"
 export default {
     data() {
         return {
-            postObj: Post({}),
+            postObj: Post(this.post),
             isShowDescription: false,
-            backgroundImage: `url(${this.post.image})`,
+            //backgroundImage: `url(data:image/png;base64,${this.post.post_img})`,
             marginTop: 0,
+            backgroundImage: "",
         }
     },
     props: ["post"],
@@ -22,7 +23,7 @@ export default {
         <div class="post-card pointer-cursor" 
             @mouseover="hoverPost"
             @mouseleave="notHoverPost">
-            <div class="post-card__img" :style="{'background-image': backgroundImage}" :style="'margin-top:' + marginTop + 'px'">
+            <div class="post-card__img" :style="'background-image:' + backgroundImage + ');' + 'margin-top:' + marginTop + 'px'">
                 <div class="post-card__time">
                     {{ postObj.getPostedTime() }}
                 </div>
@@ -47,5 +48,6 @@ export default {
     },
     mounted() {
         this.postObj = Post(this.post)
+        this.backgroundImage = `url(${this.postObj.getImage()}`
     }
 }

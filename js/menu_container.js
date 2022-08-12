@@ -4,7 +4,7 @@ export default {
             hoverRoute: ""
         }
     },
-    props: ["turnMenuOff", "turnOnCrossModal", "mode"],
+    props: ["turnMenuOff", "turnOnCrossModal", "mode", 'returnPostsContainer'],
     template: `
         <div class="menu-container" >
             <div class="menu-navbar">
@@ -22,6 +22,7 @@ export default {
                     :index="index-1"
                     :mode="mode"
                     :turn-on-cross-modal="turnOnCrossModal"
+                    :return-posts-container="returnPostsContainer"
                     :turn-menu-off="turnMenuOff">
                     </menu-route-element>
                 <div class="text-white menu-route__background-route text-center"

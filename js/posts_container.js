@@ -1,8 +1,12 @@
 export default {
-    props: ['posts'],
+    props: ['posts', 'readPost'],
     template: `
         <div class="posts-container">
-            <post-card v-for="post in posts" :post="post"></post-card>
+            <post-card 
+                v-for="(post, index) in posts" 
+                    :post="post"
+                        @click="readPost(index)">
+                            </post-card>
         </div>
     `,
     mounted() {

@@ -7,6 +7,7 @@ export default {
             isMenuOn: false,
             isCrossModalRun: false,
             mode: Mode(),
+            showedPost: -1,
         }
     },
     methods: {
@@ -18,10 +19,19 @@ export default {
         },
         turnOnCrossModal() {
             this.isCrossModalRun = true 
-            const that = this
             setTimeout(() => {
-                that.isCrossModalRun = false
+                this.isCrossModalRun = false
             }, 3000)
+        },
+        readPost(index) {
+            this.turnOnCrossModal()
+
+            setTimeout(() => {
+                this.showedPost = index
+            }, 1000)
+        },
+        returnPostsContainer() {
+            this.showedPost = -1
         }
     }
 }

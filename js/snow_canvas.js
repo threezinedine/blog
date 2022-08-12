@@ -10,6 +10,7 @@ export default class SnowCanvas {
     initialSetup() {
         this.canvas.width = window.innerWidth
         this.canvas.height = window.innerHeight
+
         this.createSnowFlakes()
         setInterval(() => {
             this.updateSnows()
